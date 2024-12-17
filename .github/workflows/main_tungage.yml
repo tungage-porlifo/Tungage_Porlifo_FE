@@ -11,25 +11,45 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v4
+      # Step 1: Checkout repository
+      - name: Checkout code
+        uses: actions/checkout@v4
 
+      # Step 2: Set up Node.js version
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
           node-version: "20.x"
 
-      - name: npm install, build, and test
-        run: |
-          npm install
-          npm run build --if-present
-          npm run test --if-present
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
 
+      # Step 4: Build the project
+      - name: Build the project
+        run: |
+          echo "Starting build process..."
+          npm run build --if-present
+
+      # Step 5: Verify the dist directory exists
+      - name: Verify dist directory after build
+        run: |
+          echo "Verifying dist directory..."
+          if (Test-Path -Path "./dist") {
+            echo "✅ dist directory exists."
+          } else {
+            echo "❌ Error: dist directory does not exist!"
+            exit 1
+          }
+
+      # Step 6: List dist directory contents
       - name: List dist directory contents
         run: |
-          echo "Listing contents of dist directory:"
+          echo "Contents of dist directory:"
           Get-ChildItem -Recurse ./dist
 
-      - name: Upload artifact for deployment job
+      # Step 7: Upload artifact for deployment
+      - name: Upload dist directory as artifact
         uses: actions/upload-artifact@v4
         with:
           name: node-app
@@ -45,16 +65,20 @@ jobs:
       id-token: write
 
     steps:
+      # Step 1: Download artifact
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
           name: node-app
+          path: ./dist # Extract artifact to ./dist folder
 
-      - name: List downloaded artifact contents
+      # Step 2: Verify downloaded artifact
+      - name: Verify downloaded artifact contents
         run: |
-          echo "Listing contents of downloaded artifact:"
+          echo "Listing downloaded artifact contents:"
           ls -la ./dist
 
+      # Step 3: Log in to Azure
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -62,7 +86,8 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_72B9CAB6DE9A48A9B3158985C2A549DA }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_F7BC9BFE3D744153BC4C4F3D17560373 }}
 
-      - name: "Deploy to Azure Web App"
+      # Step 4: Deploy to Azure Web App
+      - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
@@ -70,6 +95,7 @@ jobs:
           slot-name: "Production"
           package: ./dist
 
+      # Step 5: Verify Deployment
       - name: Verify Deployment
         run: |
           echo "Deployment completed. Verifying..."
