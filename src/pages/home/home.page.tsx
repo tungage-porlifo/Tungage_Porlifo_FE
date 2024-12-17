@@ -41,7 +41,7 @@ const HomePage = () => {
 
             <div className="w-full md:w-1/2 h-full flex items-center justify-center mt-6 md:mt-0 relative overflow-hidden">
                 <img
-                    src="/public/header.png"
+                    src="/images/header.png"
                     alt="TUNGAGE Portfolio"
                     className="w-full h-full object-cover bg-black"
                 />
