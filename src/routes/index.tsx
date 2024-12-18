@@ -1,3 +1,4 @@
+import FreeStyle from "@/components/FreeStyle";
 import {
   CONTACT_PAGE,
   DIRECTOR_PAGE,
@@ -15,19 +16,19 @@ const AppRouter = () => {
       <Route path={HOME_PAGE} element={<HomePage />} />
       <Route
         path={FREESTYLE_FOOTBALL_PAGE}
-        // element={<Login />}
+        element={<FreeStyle />}
       />
       <Route
         path={DIRECTOR_PAGE}
-        // element={<Login />}
+      // element={<Login />}
       />
       <Route
         path={GALLERY_PAGE}
-        // element={<Login />}
+      // element={<Login />}
       />
       <Route
         path={CONTACT_PAGE}
-        // element={<Login />}
+      // element={<Login />}
       />
     </Routes>
   );
