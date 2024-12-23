@@ -54,7 +54,7 @@ const FreeStyle = () => {
           </h1>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-6 mx-8">
+        <div className="flex flex-col lg:flex-row justify-center text-center gap-6 mx-8">
           <div className="w-full h-full">
             <div className="mb-10">
               <div className="lg:text-4xl md:text-3xl text-2xl font-extrabold tracking-wider">
@@ -69,26 +69,28 @@ const FreeStyle = () => {
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row justify-center gap-4">
-              <img
-                src="/public/images/Owen.png"
-                alt=""
-                className="w-full object-cover overflow-hidden"
-              />
+            <div className="flex flex-row gap-2 items-center justify-around md:justify-between">
+              <div>
+                <img
+                  src="/public/images/Deco.png"
+                  alt=""
+                  className="w-[100%] h-[100%] object-cover"
+                />
+              </div>
 
-              <img
-                src="/public/images/Ronaldinho.png"
-                alt=""
-                className="w-full object-cover overflow-hidden"
-              />
-            </div>
+              <div className="flex flex-col justify-center gap-4">
+                <img
+                  src="/public/images/Owen.png"
+                  alt=""
+                  className="w-full object-cover overflow-hidden"
+                />
 
-            <div className="mt-10">
-              <img
-                src="/public/images/Deco.png"
-                alt=""
-                className="w-[100%] h-[100%]"
-              />
+                <img
+                  src="/public/images/Ronaldinho.png"
+                  alt=""
+                  className="w-full object-cover overflow-hidden"
+                />
+              </div>
             </div>
           </div>
 
@@ -98,13 +100,6 @@ const FreeStyle = () => {
                 src="/public/images/Ronaldinho1.png"
                 className="w-full object-cover bg-black"
                 alt="Freestyle Image"
-              />
-            </div>
-            <div className="w-full h-full flex flex-col items-center justify-center overflow-hidden">
-              <img
-                src="/public/images/Compare.png"
-                alt=""
-                className="w-full mt-10 lg:mt-0"
               />
             </div>
           </div>
