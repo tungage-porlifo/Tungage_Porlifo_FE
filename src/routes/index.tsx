@@ -1,4 +1,3 @@
-import FreeStyle from "@/components/FreeStyle";
 import {
   CONTACT_PAGE,
   DIRECTOR_PAGE,
@@ -8,6 +7,9 @@ import {
 } from "@/constants/directions/link.direction";
 import HomePage from "@/pages/home/home.page";
 import { Navigate, Route, Routes } from "react-router-dom";
+import FreestylePage from "@/pages/freestyle/freestyle.page";
+import Director from "@/pages/director/director.page";
+
 
 const AppRouter = () => {
   return (
@@ -16,11 +18,11 @@ const AppRouter = () => {
       <Route path={HOME_PAGE} element={<HomePage />} />
       <Route
         path={FREESTYLE_FOOTBALL_PAGE}
-        element={<FreeStyle />}
+        element={<FreestylePage />}
       />
       <Route
         path={DIRECTOR_PAGE}
-      // element={<Login />}
+        element={<Director />}
       />
       <Route
         path={GALLERY_PAGE}

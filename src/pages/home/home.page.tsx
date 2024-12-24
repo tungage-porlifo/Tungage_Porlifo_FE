@@ -8,8 +8,8 @@ const HomePage = () => {
                 <div className="text-5xl md:text-9xl font-extrabold tracking-wider">TUNGAGE</div>
 
                 <div className="mt-6 md:mt-10 text-2xl md:text-4xl lg:text-5xl text-red-500 space-y-2">
-                    <p>| Vận động viên</p>
-                    <p>| Đạo diễn hình ảnh</p>
+                    <p>| Athlete</p>
+                    <p>| Director</p>
                     <p>| MC - TV Host | Content Creator</p>
                 </div>
 

@@ -13,19 +13,19 @@ const ICON_SIZE = 'w-10 h-10 py-2';
 
 const listFreestyleMenu: IFreestyleMenu[] = [
   {
-    title: "THÀNH TÍCH:",
-    content: "Vô địch Việt Nam | Top 1 Châu Á | Top 4 Thế Giới",
+    title: "ACHIVEMENTS:",
+    content: "Nation champion | Top 1 Asia Ranked | Top 4 World Ranked",
     icon: < FontAwesomeIcon icon={faTrophy} className={ICON_SIZE} />,
 
   },
   {
-    title: "GIÁM KHẢO:",
+    title: "JURY:",
     content: "Giải vô địch Châu Á 2018 -2024 | Giải vô địch Thế Giới 2020 + 2021",
     icon: < FontAwesomeIcon icon={faGavel} className={ICON_SIZE} />,
 
   },
   {
-    title: "Đại sứ thương hiệu:",
+    title: "Ambassador:",
     content: "Bundesliga Global 2019-2021 | adidas Vietnam 2016-2022 | Tiger Beer Global 2019 | Chervolet US 2017",
     icon: <FontAwesomeIcon icon={faHandshake} className={ICON_SIZE} />
   },
