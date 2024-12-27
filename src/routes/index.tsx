@@ -9,6 +9,7 @@ import HomePage from "@/pages/home/home.page";
 import { Navigate, Route, Routes } from "react-router-dom";
 import FreestylePage from "@/pages/freestyle/freestyle.page";
 import Director from "@/pages/director/director.page";
+import Contact from "@/pages/contact/contact.page";
 
 
 const AppRouter = () => {
@@ -30,7 +31,7 @@ const AppRouter = () => {
       />
       <Route
         path={CONTACT_PAGE}
-      // element={<Login />}
+        element={<Contact />}
       />
     </Routes>
   );
