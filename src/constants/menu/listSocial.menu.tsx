@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram, faTelegramPlane, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { FACEBOOK_LINK, GMAIL_LINK, INSTAGRAM_LINK, YOUTUBE_LINK } from "../directions/social.direction";
+import { faFacebook, faInstagram, faTelegramPlane, faTiktok, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { FACEBOOK_LINK, GMAIL_LINK, INSTAGRAM_LINK, TIKTOK_LINK, YOUTUBE_LINK } from "../directions/social.direction";
 
 // Interface definition
 interface ISocialMenu {
@@ -34,6 +34,14 @@ const listSocialMenu: ISocialMenu[] = [
     href: `${YOUTUBE_LINK}`,
     icon: <FontAwesomeIcon
       icon={faYoutube}
+      className={ICON_SIZE}
+    />
+  },
+  {
+    title: "Tik Tok",
+    href: `${TIKTOK_LINK}`,
+    icon: <FontAwesomeIcon
+      icon={faTiktok}
       className={ICON_SIZE}
     />
   },

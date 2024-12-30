@@ -22,9 +22,7 @@ const DirectorMV = () => {
               <div className="text-lg bg-gray-300  text-red-500 font-extrabold rounded-lg items-end w-32">{video.totalViews}</div>
               <img src={video.introductionImg}
                 alt=""
-                className="w-full flex justify-center items-center"
-              // lazy="loading"
-              />
+                className="w-full flex justify-center items-center" />
             </Link>
           ))}
 
