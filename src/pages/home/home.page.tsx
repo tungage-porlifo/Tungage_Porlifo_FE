@@ -31,21 +31,23 @@ const HomePage = () => {
                             href={social.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:underline decoration-slate-100 underline w-8 h-8"
+                            className={`hover:underline decoration-slate-100 underline w-8 h-8 animate-fadeSlide `}
                         >
                             {social.icon}
                         </a>
                     ))}
                 </div>
+
             </div>
 
             <div className="w-full md:w-1/2 h-full flex items-center justify-center mt-6 md:mt-0 relative overflow-hidden">
                 <img
                     src="/images/header.png"
                     alt="TUNGAGE Portfolio"
-                    className="w-full h-full object-cover bg-black"
+                    className="w-full h-full object-cover bg-black animate-zoomInOut opacity-0 animate-fadeIn"
                 />
             </div>
+
         </section >
     );
 };

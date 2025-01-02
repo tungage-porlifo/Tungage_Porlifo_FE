@@ -47,6 +47,11 @@ const listContentMenu: IContentMenu[] =
       className: SIZE
     },
     {
+      img: '/images/MILO.jpg',
+      title: 'Milo',
+      className: SIZE
+    },
+    {
       img: '/images/chevrolet.jpg',
       title: 'Chevrolet',
       className: SIZE
@@ -57,18 +62,13 @@ const listContentMenu: IContentMenu[] =
       className: SIZE
     },
     {
-      img: '/images/Castrol.png',
-      title: 'Castrol',
-      className: SIZE
-    },
-    {
       img: '/images/Tiger.png',
       title: 'Tiger',
       className: SIZE
     },
     {
-      img: '/images/MILO.jpg',
-      title: 'Milo',
+      img: '/images/Castrol.png',
+      title: 'Castrol',
       className: SIZE
     },
     {
