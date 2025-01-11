@@ -3,10 +3,10 @@ import WorldArenaComponent from "./components/world-arena.component";
 
 const FreestylePage = () => {
   return (
-    <div>
+    <>
       <ProAthleteComponent />
       <WorldArenaComponent />
-    </div>
+    </>
   )
 }
 

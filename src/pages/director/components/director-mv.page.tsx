@@ -9,7 +9,7 @@ const DirectorMV = () => {
           DIRECTOR
         </p>
         <p className="text-white lg:mt-8 lg:text-3xl md:text-2xl text-sm justify-end">
-          With 15 years' expertise in the film industry. Tungage is the director of huge brand advertisements and million-view MVs, such as: Em Iu, Choi Nhu Tui My,...
+          With 15 years' expertise in the film industry.Tungage is the director of huge brand advertisements and million-view MVs, such as: Em Iu, Choi Nhu Tui My,...
         </p>
         <div className="md:w-full w-64 flex flex-col items-end space-y-6 pt-10 md:mt-10 md:flex-col text-2xl md:text-2xl lg:text-5xl md:gap-3">
           {videoDirection.map((video, index) => (
